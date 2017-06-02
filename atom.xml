@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://linuxcluster.github.io/"/>
-  <updated>2017-06-02T06:29:59.335Z</updated>
+  <updated>2017-06-02T06:33:50.168Z</updated>
   <id>http://linuxcluster.github.io/</id>
   
   <author>
@@ -16,13 +16,13 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>佛祖保佑,永不宕机</title>
+    <title>佛祖保佑.永不宕机</title>
     <link href="http://linuxcluster.github.io/2017/06/02/%E4%BD%9B%E7%A5%96%E4%BF%9D%E4%BD%91-%E6%B0%B8%E4%B8%8D%E5%AE%95%E6%9C%BA/"/>
     <id>http://linuxcluster.github.io/2017/06/02/佛祖保佑-永不宕机/</id>
     <published>2017-06-02T06:13:01.000Z</published>
-    <updated>2017-06-02T06:29:59.335Z</updated>
+    <updated>2017-06-02T06:33:50.168Z</updated>
     
-    <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">////////////////////////////////////////////////////////////////////</div><div class="line">//                          _ooOoo_                               //</div><div class="line">//                         o8888888o                              //</div><div class="line">//                         88<span class="string">" . "</span>88                              //</div><div class="line">//                         (| ^_^ |)                              //</div><div class="line">//                         O\  =  /O                              //</div><div class="line">//                      ____/`---<span class="string">'\____                           //</span></div><div class="line">//                    .'  \\|     |//  `.                         //</div><div class="line">//                   /  \\|||  :  |||//  \                        //</div><div class="line">//                  /  _||||| -:- |||||-  \                       //</div><div class="line">//                  |   | \\\  -  /// |   |                       //</div><div class="line">//                  | \_|  <span class="string">''</span>\---/<span class="string">''</span>  |   |                       //</div><div class="line">//                  \  .-\__  `-`  ___/-. /                       //</div><div class="line">//                ___`. .<span class="string">'  /--.--\  `. . ___                     //</span></div><div class="line">//              ."" '&lt;  `.___\_&lt;|&gt;_/___.<span class="string">'  &gt;'</span><span class="string">""</span>.                  //</div><div class="line">//            | | :  `- \`.;`\ _ /`;.`/ - ` : | |                 //</div><div class="line">//            \  \ `-.   \_ __\ /__ _/   .-` /  /                 //</div><div class="line">//      ========`-.____`-.___\_____/___.-`____.-<span class="string">'========         //</span></div><div class="line">//                           `=---='                              //</div><div class="line">//      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^        //</div><div class="line">//                  佛祖保佑       永不宕机                       //</div><div class="line">////////////////////////////////////////////////////////////////////</div></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">////////////////////////////////////////////////////////////////////</div><div class="line">//                          _ooOoo_                               //</div><div class="line">//                         o8888888o                              //</div><div class="line">//                         88<span class="string">" . "</span>88                              //</div><div class="line">//                         (| ^_^ |)                              //</div><div class="line">//                         O\  =  /O                              //</div><div class="line">//                      ____/`---<span class="string">'\____                           //</span></div><div class="line">//                    .'  \\|     |//  `.                         //</div><div class="line">//                   /  \\|||  :  |||//  \                        //</div><div class="line">//                  /  _||||| -:- |||||-  \                       //</div><div class="line">//                  |   | \\\  -  /// |   |                       //</div><div class="line">//                  | \_|  <span class="string">''</span>\---/<span class="string">''</span>  |   |                       //</div><div class="line">//                  \  .-\__  `-`  ___/-. /                       //</div><div class="line">//                ___`. .<span class="string">'  /--.--\  `. . ___                     //</span></div><div class="line">//              ."" '&lt;  `.___\_&lt;|&gt;_/___.<span class="string">'  &gt;'</span><span class="string">""</span>.                  //</div><div class="line">//            | | :  `- \`.;`\ _ /`;.`/ - ` : | |                 //</div><div class="line">//            \  \ `-.   \_ __\ /__ _/   .-` /  /                 //</div><div class="line">//      ========`-.____`-.___\_____/___.-`____.-<span class="string">'========         //</span></div><div class="line">//                           `=---='                              //</div><div class="line">//      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^        //</div><div class="line">//                   佛祖保佑       永不宕机                       //</div><div class="line">////////////////////////////////////////////////////////////////////</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
@@ -30,6 +30,8 @@
     
     </summary>
     
+    
+      <category term="娱乐" scheme="http://linuxcluster.github.io/tags/%E5%A8%B1%E4%B9%90/"/>
     
   </entry>
   
