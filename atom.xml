@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://linuxcluster.github.io/"/>
-  <updated>2017-06-02T07:08:10.767Z</updated>
+  <updated>2017-06-02T07:10:54.118Z</updated>
   <id>http://linuxcluster.github.io/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="http://linuxcluster.github.io/2017/06/02/%E5%AE%9E%E7%8E%B0%E5%A4%9A%E6%9C%BA%E7%9B%B8%E4%BA%92%E5%85%8D%E5%AF%86%E7%A0%81ssh/"/>
     <id>http://linuxcluster.github.io/2017/06/02/实现多机相互免密码ssh/</id>
     <published>2017-06-02T07:06:58.000Z</published>
-    <updated>2017-06-02T07:08:10.767Z</updated>
+    <updated>2017-06-02T07:10:54.118Z</updated>
     
-    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">当我们在配置多台计算，使之可以相互使用无密码登录-ssh,之前都是一台一台的配置，现在一台A上添加B，然后在另一台B上再次添加A，这样使得authorized_keys中的内容相同，但时并不是完全相同，比如添加顺序。如果超过2台，这种配置就相当复杂了，而且容易出错。后来，在网上看到了一种简单的配置，所有机器只需配置一遍即可。但是考虑到安全问题，生产线上就不要这么做了！</div></pre></td></tr></table></figure>
+    <content type="html"><![CDATA[<p>当我们在配置多台计算，使之可以相互使用无密码登录-ssh,之前都是一台一台的配置，现在一台A上添加B，然后在另一台B上再次添加A，这样使得authorized_keys中的内容相同，但时并不是完全相同，比如添加顺序。如果超过2台，这种配置就相当复杂了，而且容易出错。后来，在网上看到</p>
 <blockquote>
 <p>1.安装ssh.  sudo apt-get install ssh. 安装完成后会在~目录（当前用户主目录，即这里的/home/xuhui）下产生一个隐藏文件夹.ssh（ls -a 可以查看隐藏文件）。如果没有这个文件，自己新建即可（mkdir .ssh）.</p>
 <p>2.进入.ssh目录下面，在每台机器上执行：ssh-keygen -t  rsa  之后一路回车，产生密钥；</p>
@@ -38,12 +38,12 @@
     
     <summary type="html">
     
-      &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;lin
+      &lt;p&gt;当我们在配置多台计算，使之可以相互使用无密码登录-ssh,之前都是一台一台的配置，现在一台A上添加B，然后在另一台B上再次添加A，这样使得authorized_keys中的内容相同，但时并不是完全相同，比如添加顺序。如果超过2台，这种配置就相当复杂了，而且容易出错。后来，在
     
     </summary>
     
     
-      <category term="ssh 免密码" scheme="http://linuxcluster.github.io/tags/ssh-%E5%85%8D%E5%AF%86%E7%A0%81/"/>
+      <category term="ssh,免密码" scheme="http://linuxcluster.github.io/tags/ssh-%E5%85%8D%E5%AF%86%E7%A0%81/"/>
     
   </entry>
   
