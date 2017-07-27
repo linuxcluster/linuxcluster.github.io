@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://linuxcluster.github.io/"/>
-  <updated>2017-06-07T04:50:15.142Z</updated>
+  <updated>2017-07-27T07:03:40.826Z</updated>
   <id>http://linuxcluster.github.io/</id>
   
   <author>
@@ -14,6 +14,47 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux快速安装配置pptp vpn服务</title>
+    <link href="http://linuxcluster.github.io/2017/07/26/Linux%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEpptp%20vpn%E6%9C%8D%E5%8A%A1/"/>
+    <id>http://linuxcluster.github.io/2017/07/26/Linux快速安装配置pptp vpn服务/</id>
+    <published>2017-07-26T11:29:26.000Z</published>
+    <updated>2017-07-27T07:03:40.826Z</updated>
+    
+    <content type="html"><![CDATA[<p>公司有两个互通的局域网，现在有个特殊需求，两个局域网各有一台服务器，需要把这两台服务器组成一个新的局域网，然后我们想到的是vpn,这里我们使用pptp vpn 是因为配置简单，能够快速实现。<br>s## pptp vpn linux服务端安装和配置</p>
+<h3 id="yum安装rpm-包（系统Centos6-5-配置了epel-yum源）"><a href="#yum安装rpm-包（系统Centos6-5-配置了epel-yum源）" class="headerlink" title="yum安装rpm 包（系统Centos6.5 ,配置了epel yum源）"></a>yum安装rpm 包（系统Centos6.5 ,配置了epel yum源）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ yum install pptpd ppp -y</div></pre></td></tr></table></figure>
+<h3 id="内核加载mppe模块"><a href="#内核加载mppe模块" class="headerlink" title="内核加载mppe模块"></a>内核加载mppe模块</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ modprobe ppp-compress-18 &amp;&amp; echo ok</div></pre></td></tr></table></figure>
+<h3 id="修改内核配置支持转发"><a href="#修改内核配置支持转发" class="headerlink" title="修改内核配置支持转发"></a>修改内核配置支持转发</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ sed -i &apos;s#net.ipv4.ip_forward = 0#net.ipv4.ip_forward = 1#&apos; /etc/sysctl.conf</div><div class="line">$ sysctl -p</div></pre></td></tr></table></figure>
+<h3 id="配置pptp-服务"><a href="#配置pptp-服务" class="headerlink" title="配置pptp 服务"></a>配置pptp 服务</h3><blockquote>
+<p>1.修改/etc/pptpd.conf<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">#server端ip</div><div class="line">localip 192.168.0.1</div><div class="line">#client端ip范围</div><div class="line">remoteip 192.168.0.234-238</div><div class="line">#rpm包安装的其它配置保持默认即可</div></pre></td></tr></table></figure></p>
+<p>2.修改/etc/ppp/options.pptpd<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#自定义vpn服务名称，其它配置保持默认即可</div><div class="line">name hs2hk</div></pre></td></tr></table></figure></p>
+<p>3.修改/etc/ppp/chap-secrets<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># Secrets for authentication using CHAP</div><div class="line"># client    server  secret          IP addresses</div><div class="line">test1&quot;    svr1    &quot;xxx&quot;    *</div></pre></td></tr></table></figure></p>
+<p>4.设置开机启动项，启动服务<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ chkconfig pptpd on</div><div class="line">$ /etc/init.d/pptpd start</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>##pptp vpn linux客户端安装和配置</p>
+<h3 id="yum-安装客户端rpm包"><a href="#yum-安装客户端rpm包" class="headerlink" title="yum 安装客户端rpm包"></a>yum 安装客户端rpm包</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ yum install pptp pptp-setup -y</div></pre></td></tr></table></figure>
+<h3 id="内核加载mppe模块-1"><a href="#内核加载mppe模块-1" class="headerlink" title="内核加载mppe模块"></a>内核加载mppe模块</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ modprobe ppp-compress-18 &amp;&amp; echo ok</div></pre></td></tr></table></figure>
+<h3 id="配置pptp客户端"><a href="#配置pptp客户端" class="headerlink" title="配置pptp客户端"></a>配置pptp客户端</h3><blockquote>
+<p>1.创建pptp vpn配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  pptpsetup --create svr1 --server 123.45.6.7 --username test1 --password xxx --encrypt</div></pre></td></tr></table></figure></p>
+<p>2.连接pptp vpn<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ pppd call svr1</div></pre></td></tr></table></figure></p>
+<p>3.拨号成功后我们可以看见客户端和服务端都多了个新IP<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">#用下面命令查看是否有新IP</div><div class="line">$ ifconfig</div><div class="line">#因为网络有时候不稳定，vpn 容易断</div><div class="line">#需要监控重连</div><div class="line">#脚本放计划任务执行</div><div class="line">#!/bin/bash</div><div class="line">/usr/sbin/fping -c 3 -t 100 -q 192.168.0.1 &amp;&gt; /tmp/fping_output.txt</div><div class="line">res=`cat /tmp/fping_output.txt |awk -F&apos;%&apos; &apos;&#123;print $2&#125;&apos; |awk -F&apos;/&apos; &apos;&#123;print $NF&#125;&apos;`</div><div class="line"></div><div class="line">if [ x$&#123;res&#125; = x100 ];then</div><div class="line">    /usr/bin/killall pppd;</div><div class="line">    /usr/sbin/pppd call svr1;</div><div class="line">fi</div></pre></td></tr></table></figure></p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;公司有两个互通的局域网，现在有个特殊需求，两个局域网各有一台服务器，需要把这两台服务器组成一个新的局域网，然后我们想到的是vpn,这里我们使用pptp vpn 是因为配置简单，能够快速实现。&lt;br&gt;s## pptp vpn linux服务端安装和配置&lt;/p&gt;
+&lt;h3 id=
+    
+    </summary>
+    
+      <category term="技术" scheme="http://linuxcluster.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="vpn" scheme="http://linuxcluster.github.io/tags/vpn/"/>
+    
+  </entry>
   
   <entry>
     <title>实现多机相互免密码ssh</title>
