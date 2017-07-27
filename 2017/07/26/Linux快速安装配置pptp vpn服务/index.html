@@ -92,17 +92,17 @@
 
 
 
-<meta name="description" content="公司有两个互通的局域网，现在有个特殊需求，两个局域网各有一台服务器，需要把这两台服务器组成一个新的局域网，然后我们想到的是vpn,这里我们使用pptp vpn 是因为配置简单，能够快速实现。s## pptp vpn linux服务端安装和配置 yum安装rpm 包（系统Centos6.5 ,配置了epel yum源）1$ yum install pptpd ppp -y 内核加载mppe模块1$">
+<meta name="description" content="公司有两个互通的局域网，现在有个特殊需求，两个局域网各有一台服务器，需要把这两台服务器组成一个新的局域网，然后我们想到的是vpn,这里我们使用pptp vpn 是因为配置简单，能够快速实现。 pptp vpn linux服务端安装和配置yum安装rpm 包（系统Centos6.5 ,配置了epel yum源）1$ yum install pptpd ppp -y 内核加载mppe模块1$ modp">
 <meta name="keywords" content="vpn">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux快速安装配置pptp vpn服务">
 <meta property="og:url" content="http://linuxcluster.github.io/2017/07/26/Linux快速安装配置pptp vpn服务/index.html">
 <meta property="og:site_name" content="鱼饼的运维博客">
-<meta property="og:description" content="公司有两个互通的局域网，现在有个特殊需求，两个局域网各有一台服务器，需要把这两台服务器组成一个新的局域网，然后我们想到的是vpn,这里我们使用pptp vpn 是因为配置简单，能够快速实现。s## pptp vpn linux服务端安装和配置 yum安装rpm 包（系统Centos6.5 ,配置了epel yum源）1$ yum install pptpd ppp -y 内核加载mppe模块1$">
-<meta property="og:updated_time" content="2017-07-27T07:03:40.826Z">
+<meta property="og:description" content="公司有两个互通的局域网，现在有个特殊需求，两个局域网各有一台服务器，需要把这两台服务器组成一个新的局域网，然后我们想到的是vpn,这里我们使用pptp vpn 是因为配置简单，能够快速实现。 pptp vpn linux服务端安装和配置yum安装rpm 包（系统Centos6.5 ,配置了epel yum源）1$ yum install pptpd ppp -y 内核加载mppe模块1$ modp">
+<meta property="og:updated_time" content="2017-07-27T07:08:35.953Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux快速安装配置pptp vpn服务">
-<meta name="twitter:description" content="公司有两个互通的局域网，现在有个特殊需求，两个局域网各有一台服务器，需要把这两台服务器组成一个新的局域网，然后我们想到的是vpn,这里我们使用pptp vpn 是因为配置简单，能够快速实现。s## pptp vpn linux服务端安装和配置 yum安装rpm 包（系统Centos6.5 ,配置了epel yum源）1$ yum install pptpd ppp -y 内核加载mppe模块1$">
+<meta name="twitter:description" content="公司有两个互通的局域网，现在有个特殊需求，两个局域网各有一台服务器，需要把这两台服务器组成一个新的局域网，然后我们想到的是vpn,这里我们使用pptp vpn 是因为配置简单，能够快速实现。 pptp vpn linux服务端安装和配置yum安装rpm 包（系统Centos6.5 ,配置了epel yum源）1$ yum install pptpd ppp -y 内核加载mppe模块1$ modp">
 
 
 
@@ -422,8 +422,8 @@
       
 
       
-        <p>公司有两个互通的局域网，现在有个特殊需求，两个局域网各有一台服务器，需要把这两台服务器组成一个新的局域网，然后我们想到的是vpn,这里我们使用pptp vpn 是因为配置简单，能够快速实现。<br>s## pptp vpn linux服务端安装和配置</p>
-<h3 id="yum安装rpm-包（系统Centos6-5-配置了epel-yum源）"><a href="#yum安装rpm-包（系统Centos6-5-配置了epel-yum源）" class="headerlink" title="yum安装rpm 包（系统Centos6.5 ,配置了epel yum源）"></a>yum安装rpm 包（系统Centos6.5 ,配置了epel yum源）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ yum install pptpd ppp -y</div></pre></td></tr></table></figure>
+        <p>公司有两个互通的局域网，现在有个特殊需求，两个局域网各有一台服务器，需要把这两台服务器组成一个新的局域网，然后我们想到的是vpn,这里我们使用pptp vpn 是因为配置简单，能够快速实现。</p>
+<h2 id="pptp-vpn-linux服务端安装和配置"><a href="#pptp-vpn-linux服务端安装和配置" class="headerlink" title="pptp vpn linux服务端安装和配置"></a>pptp vpn linux服务端安装和配置</h2><h3 id="yum安装rpm-包（系统Centos6-5-配置了epel-yum源）"><a href="#yum安装rpm-包（系统Centos6-5-配置了epel-yum源）" class="headerlink" title="yum安装rpm 包（系统Centos6.5 ,配置了epel yum源）"></a>yum安装rpm 包（系统Centos6.5 ,配置了epel yum源）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ yum install pptpd ppp -y</div></pre></td></tr></table></figure>
 <h3 id="内核加载mppe模块"><a href="#内核加载mppe模块" class="headerlink" title="内核加载mppe模块"></a>内核加载mppe模块</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ modprobe ppp-compress-18 &amp;&amp; echo ok</div></pre></td></tr></table></figure>
 <h3 id="修改内核配置支持转发"><a href="#修改内核配置支持转发" class="headerlink" title="修改内核配置支持转发"></a>修改内核配置支持转发</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ sed -i &apos;s#net.ipv4.ip_forward = 0#net.ipv4.ip_forward = 1#&apos; /etc/sysctl.conf</div><div class="line">$ sysctl -p</div></pre></td></tr></table></figure>
 <h3 id="配置pptp-服务"><a href="#配置pptp-服务" class="headerlink" title="配置pptp 服务"></a>配置pptp 服务</h3><blockquote>
@@ -674,7 +674,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#yum安装rpm-包（系统Centos6-5-配置了epel-yum源）"><span class="nav-number">1.</span> <span class="nav-text">yum安装rpm 包（系统Centos6.5 ,配置了epel yum源）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#内核加载mppe模块"><span class="nav-number">2.</span> <span class="nav-text">内核加载mppe模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改内核配置支持转发"><span class="nav-number">3.</span> <span class="nav-text">修改内核配置支持转发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置pptp-服务"><span class="nav-number">4.</span> <span class="nav-text">配置pptp 服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#yum-安装客户端rpm包"><span class="nav-number">5.</span> <span class="nav-text">yum 安装客户端rpm包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#内核加载mppe模块-1"><span class="nav-number">6.</span> <span class="nav-text">内核加载mppe模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置pptp客户端"><span class="nav-number">7.</span> <span class="nav-text">配置pptp客户端</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#pptp-vpn-linux服务端安装和配置"><span class="nav-number">1.</span> <span class="nav-text">pptp vpn linux服务端安装和配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#yum安装rpm-包（系统Centos6-5-配置了epel-yum源）"><span class="nav-number">1.1.</span> <span class="nav-text">yum安装rpm 包（系统Centos6.5 ,配置了epel yum源）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#内核加载mppe模块"><span class="nav-number">1.2.</span> <span class="nav-text">内核加载mppe模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改内核配置支持转发"><span class="nav-number">1.3.</span> <span class="nav-text">修改内核配置支持转发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置pptp-服务"><span class="nav-number">1.4.</span> <span class="nav-text">配置pptp 服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#yum-安装客户端rpm包"><span class="nav-number">1.5.</span> <span class="nav-text">yum 安装客户端rpm包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#内核加载mppe模块-1"><span class="nav-number">1.6.</span> <span class="nav-text">内核加载mppe模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置pptp客户端"><span class="nav-number">1.7.</span> <span class="nav-text">配置pptp客户端</span></a></li></ol></li></ol></div>
             
 
           </div>
