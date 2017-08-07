@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://linuxcluster.github.io/"/>
-  <updated>2017-07-27T07:11:59.030Z</updated>
+  <updated>2017-08-07T09:29:56.383Z</updated>
   <id>http://linuxcluster.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://linuxcluster.github.io/2017/07/26/Linux%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEpptp%20vpn%E6%9C%8D%E5%8A%A1/"/>
     <id>http://linuxcluster.github.io/2017/07/26/Linux快速安装配置pptp vpn服务/</id>
     <published>2017-07-26T11:29:26.000Z</published>
-    <updated>2017-07-27T07:11:59.030Z</updated>
+    <updated>2017-08-07T09:29:56.383Z</updated>
     
     <content type="html"><![CDATA[<p>公司有两个互通的局域网，现在有个特殊需求，两个局域网各有一台服务器，需要把这两台服务器组成一个新的局域网，然后我们想到的是vpn,这里我们使用pptp vpn 是因为配置简单，能够快速实现。</p>
 <h2 id="pptp-vpn-linux服务端安装和配置"><a href="#pptp-vpn-linux服务端安装和配置" class="headerlink" title="pptp vpn linux服务端安装和配置"></a>pptp vpn linux服务端安装和配置</h2><h3 id="yum安装rpm-包（系统Centos6-5-配置了epel-yum源）"><a href="#yum安装rpm-包（系统Centos6-5-配置了epel-yum源）" class="headerlink" title="yum安装rpm 包（系统Centos6.5 ,配置了epel yum源）"></a>yum安装rpm 包（系统Centos6.5 ,配置了epel yum源）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ yum install pptpd ppp -y</div></pre></td></tr></table></figure>
@@ -28,7 +28,7 @@
 <h3 id="修改内核配置支持转发"><a href="#修改内核配置支持转发" class="headerlink" title="修改内核配置支持转发"></a>修改内核配置支持转发</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ sed -i &apos;s#net.ipv4.ip_forward = 0#net.ipv4.ip_forward = 1#&apos; /etc/sysctl.conf</div><div class="line">$ sysctl -p</div></pre></td></tr></table></figure>
 <h3 id="配置pptp-服务"><a href="#配置pptp-服务" class="headerlink" title="配置pptp 服务"></a>配置pptp 服务</h3><blockquote>
 <p>1.修改/etc/pptpd.conf<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">#server端ip</div><div class="line">localip 192.168.0.1</div><div class="line">#client端ip范围</div><div class="line">remoteip 192.168.0.234-238</div><div class="line">#rpm包安装的其它配置保持默认即可</div></pre></td></tr></table></figure></p>
-<p>2.修改/etc/ppp/options.pptpd<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#自定义vpn服务名称，其它配置保持默认即可</div><div class="line">name hs2hk</div></pre></td></tr></table></figure></p>
+<p>2.修改/etc/ppp/options.pptpd<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#自定义vpn服务名称，其它配置保持默认即可</div><div class="line">name svr1</div></pre></td></tr></table></figure></p>
 <p>3.修改/etc/ppp/chap-secrets<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># Secrets for authentication using CHAP</div><div class="line"># client    server  secret          IP addresses</div><div class="line">test1&quot;    svr1    &quot;xxx&quot;    *</div></pre></td></tr></table></figure></p>
 <p>4.设置开机启动项，启动服务<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ chkconfig pptpd on</div><div class="line">$ /etc/init.d/pptpd start</div></pre></td></tr></table></figure></p>
 </blockquote>
